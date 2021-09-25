@@ -28,6 +28,13 @@ const handleUserInput = function (data) {
   if (data === 'd'){
     connection.write("Move: right")
   }
+// chat 
+  if (data === '.'){
+    connection.write("Say: noob")
+  }
+  if (data === ','){
+    connection.write("Say: nice!")
+  }
 }
 
 
