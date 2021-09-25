@@ -3,8 +3,12 @@ const net = require("net");
 // establishes a connection with the game server
 const connect = function () {
   const conn = net.createConnection({
-    host: 'localhost',
-    port: '3000',
+    host: '10.0.2.15',
+    port: '50541'
+  });
+  conn.on('connect', () => {
+    conn.write("Name: ASD")
+    conn.write('Successfully connected to game server');
   });
 
   // interpret incoming data as text
@@ -15,6 +19,14 @@ const connect = function () {
 
 console.log("Connecting ...");
 connect();
+
+
+
+
+
+
+
+
 
 module.exports = {
   // myNumber, // stores 42 as myNumber
